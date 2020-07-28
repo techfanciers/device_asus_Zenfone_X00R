@@ -14,4 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_X00R.mk
+    $(LOCAL_DIR)/aosp_X00R.mk
+
+COMMON_LUNCH_CHOICES := \
+    aosp_X00R-user \
+    aosp_X00R-userdebug \
+    aosp_X00R-eng 

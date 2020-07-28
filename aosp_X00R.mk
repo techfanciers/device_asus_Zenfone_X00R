@@ -22,12 +22,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Inherit from X00R device
 $(call inherit-product, device/asus/X00R/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AOSP Extended stuff.
+$(call inherit-product, vendor/aosp/common.mk)
+TARGET_NOGAPPS := true
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := X00R
-PRODUCT_NAME := lineage_X00R
+PRODUCT_NAME := aosp_X00R
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_X00RD
 PRODUCT_MANUFACTURER := asus
@@ -35,3 +37,9 @@ TARGET_VENDOR := asus
 BOARD_VENDOR := asus
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="WW_X00PD-user 8.0.0 OPR1.170623.032 15.00.1801.31 release-keys"
+
+# Set BUILD_FINGERPRINT variable
+BUILD_FINGERPRINT := asus/WW_X00PD/ASUS_X00P_2:8.0.0/OPR1.170623.032/15.00.1801.31:user/release-keys
