@@ -22,10 +22,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Inherit from X00R device
 $(call inherit-product, device/asus/X00R/device.mk)
 
-# Inherit some common AOSP Extended stuff.
-$(call inherit-product, vendor/aosp/common.mk)
-TARGET_NOGAPPS := true
+# Inherit some common Evolution X stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := X00R
