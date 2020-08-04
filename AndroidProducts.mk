@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_X00R.mk
+    $(LOCAL_DIR)/havoc_X00R.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_X00R-user \
-    aosp_X00R-userdebug \
-    aosp_X00R-eng 
+    havoc_X00R-user \
+    havoc_X00R-userdebug \
+    havoc_X00R-eng 
